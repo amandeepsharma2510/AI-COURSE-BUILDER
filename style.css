@@ -1,0 +1,132 @@
+body{
+  margin:0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+  color:#ffffff;
+}
+
+/*HeaDERRR*/
+
+header{
+  text-align:center;
+  padding:25px;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+header h1{
+  letter-spacing:4px;
+  font-size:32px;
+  text-transform:uppercase;
+  background: linear-gradient(90deg,#ff416c,#ff4b2b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/*cONtainwerr*/
+
+.container{
+  display:flex;
+  gap:30px;
+  padding:40px;
+  flex-wrap:wrap;
+}
+
+.left,.right{
+  flex:1;
+  min-width:320px;
+}
+
+/*carrdsss*/
+
+.camera-card,
+.alert-card,
+.chart-card,
+.score-card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.camera-card:hover,
+.alert-card:hover,
+.chart-card:hover,
+.score-card:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:0 20px 45px rgba(255,0,120,0.4);
+}
+
+/*VidepoOO*/
+
+video{
+  width:100%;
+  border-radius:12px;
+  border:2px solid rgba(255,255,255,0.1);
+}
+
+/*Buttonss*/
+
+button{
+  padding:12px 30px;
+  background:linear-gradient(45deg,#ff416c,#ff4b2b);
+  border:none;
+  color:white;
+  border-radius:30px;
+  cursor:pointer;
+  margin-top:15px;
+  font-weight:bold;
+  letter-spacing:1px;
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 20px rgba(255,65,108,0.8);
+}
+
+/*SCORE*/
+
+.score-card{
+  text-align:center;
+}
+
+.score-card h1{
+  font-size:70px;
+  color:#00f7ff;
+  text-shadow:0 0 20px #00f7ff;
+}
+
+/*respONSIVEe*/
+
+@media(max-width:900px){
+  .container{
+    flex-direction:column;
+  }
+}
+.camera-wrapper{
+position:relative;
+}
+
+.ai-box{
+position:absolute;
+top:25%;
+left:30%;
+width:200px;
+height:150px;
+border:3px solid #00f7ff;
+border-radius:10px;
+box-shadow:0 0 20px #00f7ff;
+animation:scan 2s infinite;
+}
+
+@keyframes scan{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
+}

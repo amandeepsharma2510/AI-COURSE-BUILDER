@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI Driver Monitoring System</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>🚗 AI DRIVER MONITORING SYSTEM</h1>
+      <p class="subtitle">Real-time Driver Safety Dashboard</p>
+    </header>
+
+    <main class="container">
+      <section class="left">
+        <div class="camera-card">
+          <h2>📷 Live Camera Feed</h2>
+
+          <div class="camera-wrapper">
+            <video id="video" autoplay muted></video>
+            <div class="ai-box"></div>
+          </div>
+        </div>
+
+        <div class="alert-card">
+          <h2>⚠ Driver Status</h2>
+
+          <div class="status-grid">
+            <p>Driver State : <span id="state">Active</span></p>
+
+            <p>Eye Status : <span id="eye">Normal</span></p>
+
+            <p>Phone Usage : <span id="phone">Not Detected</span></p>
+          </div>
+
+          <button onclick="alertTrigger()">Trigger Alert</button>
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="chart-card">
+          <h2>📊 Driver Behaviour</h2>
+
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="score-card">
+          <h2>🏆 Driving Score</h2>
+
+          <h1 id="score">100%</h1>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>AI Driver Monitoring System</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
